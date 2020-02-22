@@ -339,8 +339,17 @@ body {
 
 .header {
   font-weight: 600;
-  font-size: 88px;
+  font-size: 64px;
   line-height: 64px; }
+
+.form__actions {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .form__button {
   border: 1px solid #121232;
@@ -350,11 +359,17 @@ body {
   font-weight: 600;
   letter-spacing: 0.5px; }
   .form__button--save {
+    background: yellow; }
+  .form__button--load {
     background: lightblue; }
+  .form__button:hover {
+    cursor: pointer; }
 
 .form__label {
+  color: black;
   display: block;
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 8px; }
 
 .form__message {
   width: 100%;
@@ -362,6 +377,7 @@ body {
   background: #fff;
   mix-blend-mode: color-dodge;
   border: 2px solid #000000;
-  min-height: 350px; }
+  min-height: 350px;
+  padding: 12px; }
 
 /*# sourceMappingURL=main.css.map */
