@@ -1,9 +1,4 @@
-# wtf-gulp-starter
+![simple editor photo](src/assets/img/readme.JPG)
 
-`npm install -g gulp-cli`
 
-`npm install`
-
-`gulp`
-
-To publish your page using github pages use `npm run deploy`
+Open simple editor [My homepage](https://pablokmieleski.github.io/simple-editor/)
