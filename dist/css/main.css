@@ -308,6 +308,42 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes backgroundChange {
+  0% {
+    background: red;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  43% {
+    background: green;
+    -webkit-transform: scale(2);
+            transform: scale(2); }
+  77% {
+    background: yellow;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    background: red;
+    -webkit-transform: scale(2);
+            transform: scale(2); } }
+
+@keyframes backgroundChange {
+  0% {
+    background: red;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  43% {
+    background: green;
+    -webkit-transform: scale(2);
+            transform: scale(2); }
+  77% {
+    background: yellow;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    background: red;
+    -webkit-transform: scale(2);
+            transform: scale(2); } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -335,7 +371,8 @@ body {
 
 .main {
   max-width: 544px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .header {
   font-weight: 600;
@@ -359,9 +396,31 @@ body {
   font-weight: 600;
   letter-spacing: 0.5px; }
   .form__button--save {
-    background: yellow; }
+    background: yellow;
+    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    will-change: background;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
+    .form__button--save:hover {
+      background: red;
+      color: white;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
   .form__button--load {
-    background: lightblue; }
+    background: lightblue;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
+    .form__button--load:hover {
+      background: greenyellow;
+      color: hotpink;
+      -webkit-transform: rotate(10deg) translateY(-5px) translateX(-5px) scale(2);
+          -ms-transform: rotate(10deg) translateY(-5px) translateX(-5px) scale(2);
+              transform: rotate(10deg) translateY(-5px) translateX(-5px) scale(2); }
   .form__button:hover {
     cursor: pointer; }
 
@@ -378,6 +437,21 @@ body {
   mix-blend-mode: color-dodge;
   border: 2px solid #000000;
   min-height: 350px;
-  padding: 12px; }
+  padding: 12px;
+  -webkit-transition: background 2s ease-out 1s;
+  -o-transition: background 2s ease-out 1s;
+  transition: background 2s ease-out 1s; }
+  .form__message:hover {
+    background: lightsalmon; }
+
+.test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: purple;
+  -webkit-animation: backgroundChange 5s ease-in-out infinite forwards;
+          animation: backgroundChange 5s ease-in-out infinite forwards; }
 
 /*# sourceMappingURL=main.css.map */
